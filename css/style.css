@@ -1,1 +1,31 @@
 @charset "UTF-8";
+
+.firstview {
+    background: linear-gradient(to right, #fefefe, #e6f0ff);
+    padding: 60px 20px;
+}
+
+.fv_inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.fv_text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.fv_visual {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+}
+
+.fv_visual img {
+    max-width: 100%;
+    height: auto;
+}
