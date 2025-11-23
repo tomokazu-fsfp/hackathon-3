@@ -26,11 +26,11 @@
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
     <header class="header" id="header">
-        <h1 class="header_title">
+        <div class="header_title">
             <a href="#" class="header_logo">
-                <img src="./img/logo.png" alt="ProNavi（在宅ワーク支援プログラミングスクールのロゴ）">
+                <img src="./img/logo.png" alt="ProNaviトップページへ">
             </a>
-        </h1>
+        </div>
         <nav class="header_nav">
             <ul class="header_nav_menu">
                 <li class="header_nav_list"><a href="#">Top</a></li>
@@ -47,28 +47,43 @@
         </nav>
     </header>
     <main>
+
         <section class="firstview">
-            <div class="fv_inner">
+            <!-- 背景レイヤー -->
+            <div class="fv-background">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 864" width="100%" height="100%"
+                    preserveAspectRatio="xMidYMid slice">
+                    <defs>
+                        <!-- 黒い形をクリップパスとして定義 -->
+                        <clippath id="fvShape">
+                            <path d="M473.876,12.866l341.914,407.56c5.613,6.69,5.613,16.444,0,23.134l-341.914,407.574c-6.842,8.156-16.943,12.866-27.589,12.866H0l352.693-420.44c5.612-6.69,5.612-16.443,0-23.134L0,0h446.287c10.647,0,20.747,4.71,27.589,12.866Z"/>
+                        </clippath>
+                    </defs>
 
-                <div class="fv_logo">
-                    <img src="./img/logo.png" alt="">
-                </div>
-
+                    <!-- 女性の写真を背景として敷き、黒い形で切り抜く -->
+                    <image href="./img/firstview1-pc.png"
+                        x="0"
+                        y="30"
+                        width="820"
+                        height="864"
+                        clip-path="url(#fvShape)"
+                        preserveAspectRatio="xMidYMid meet"/>
+                </svg>
+            </div>
+            <div class="fv-content">
+                <h1 class="fv_logo">
+                    <img src="./img/logo.png" alt="ProNavi（在宅ワーク支援プログラミングスクールのロゴ）">
+                </h1>
                 <div class="fv_text">
                     <h2 class="fv_vision">挑進</h2>
-                    <p class="fv_catchphrase">”在宅で働く”を、現実に</p>
+                    <p class="fv_catchphrase">"在宅で働く"を、現実に</p>
                     <p class="fv_catchphrase">未経験からWebクリエイターへ</p>
                     <p class="fv_catchphrase">あなた専属の伴走者と</p>
                 </div>
-
-                <a href="./googletag/index.html" class="cta">無料カウンセリングを予約する</a>
-
-                <div class="fv_visual">
-                    <img src="./img/firstview1.png" alt="在宅で働くことを挑戦する女性の前向きなイメージ">
-                </div>
-
+                <a href="./googletag/index.html" class="btn-cta">無料カウンセリングを予約する</a>
             </div>
         </section>
+
         <section class="about">
             <h2 class="sec-title">About</h2>
             <h3 class="about-subtitle">Pronaviとは</h3>
