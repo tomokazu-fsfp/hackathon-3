@@ -1,69 +1,125 @@
 @charset "UTF-8";
 
-@charset "UTF-8";
-
 /* ファーストビュー全体 */
 .firstview {
     position: relative;
     overflow: hidden;
-    height: 100vh; /* 画面全体の高さ */
+    height: 100vh;
+    /* 画面全体に広げる */
 }
 
-/* 背景レイヤー（SVG＋画像をクリップして敷く） */
+/* ロゴ */
+.fv-logo-fixed {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 2;
+}
+
+.fv-logo-fixed img {
+    max-width: 160px;
+    height: auto;
+    border-radius: 5px;
+}
+
+/* 背景レイヤー（SVG＋画像） */
 .fv-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* 背面 */
+    z-index: 0;
+    background: linear-gradient(to right, #f0f8ff, #6495ed);
 }
 
-/* コンテンツ（ロゴ・テキスト・CTA） */
+/* コンテンツレイヤー（ロゴ・テキスト・CTA） */
 .fv-content {
-    position: relative;
-    z-index: 1; /* 背景の上に重ねる */
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    z-index: 1;
+    max-width: 90%;
+    text-align: left;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px; /* 余白調整 */
-    min-height: 864px; /* 背景と揃える */
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /* テキスト部分 */
 .fv_text {
     flex: 1;
     min-width: 300px;
+    position: relative;
 }
 
-/* ロゴ */
-.fv_logo img {
-    max-width: 200px;
-    height: auto;
+.fv_vision {
+    font-size: 5.5rem;
+    font-weight: 700;
+    margin-bottom: 0.3em;
+    line-height: 0.1;
+    letter-spacing: 0.5em;
+    transform: rotate(-7deg);
+    display: inline-block;
+    color: #465a7a;
+    text-shadow: #fafafa 5px 5px 2px;
 }
 
-/* キャッチコピー */
 .fv_catchphrase {
-    font-size: 1.5rem;
-    line-height: 1.6;
+    font-size: 2rem;
+    line-height: 1;
     margin: 0.5em 0;
+    color: #465a7a;
+    text-shadow: #fafafa 2px 2px 2px;
+    transform: rotate(-7deg);
+    /* display: inline-block; */
+}
+
+.fv_catchphrase:nth-of-type(1) {
+    position: relative;
+    top: 0;
+    left: 10%;
+    line-height: 0.7;
+}
+
+.fv_catchphrase:nth-of-type(2) {
+    position: relative;
+    top: 0;
+    left: 30%;
+    line-height: 0.7;
+}
+
+.fv_catchphrase:nth-of-type(3) {
+    position: relative;
+    top: 0;
+    left: 82%;
+    line-height: 0.1;
 }
 
 /* CTAボタン */
 .btn-cta {
-    display: inline-block;
-    margin-top: 20px;
+    position: absolute;
+    right: -120%;
+    bottom: -50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     padding: 12px 24px;
-    background: #007acc;
-    color: #fff;
+    background: #ffa07a80;
+    color: #465a7a;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 24px;
     font-weight: bold;
     transition: background 0.3s ease;
+    gap: 2.5em;
 }
+
+.arrow {
+    font-size: 1.2em;
+    line-height: 1;
+}
+
 .btn-cta:hover {
-    background: #005fa3;
+    background: #ffa07a;
+    color: #f0f8ff
 }
