@@ -1,142 +1,182 @@
 @charset "UTF-8";
 
-/* ファーストビュー全体 */
+
+
+
+
+
+
+
+
+/*-------------------------------------------
+firstview  トップ画面
+-------------------------------------------*/
 .firstview {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    /* 画面全体に広げる */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
-/* ロゴ */
 .fv-logo-fixed {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
 }
 
 .fv-logo-fixed img {
-    max-width: 160px;
-    height: auto;
-    border-radius: 5px;
+  max-width: 160px;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* 背景レイヤー（SVG＋画像） */
 .fv-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: linear-gradient(to right, #f0f8ff, #6495ed);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(to right, #f0f8ff, #6495ed);
 }
 
-/* コンテンツレイヤー（ロゴ・テキスト・CTA） */
 .fv-content {
-    position: absolute;
-    top: 65%;
-    left: 5%;
-    z-index: 1;
-    max-width: 90%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  z-index: 1;
+  max-width: 100%;
+  height: 300px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-/* テキスト部分 */
 .fv_text {
-    flex: 1;
-    min-width: 300px;
-    position: relative;
+  flex: 1;
+  width: 100%;
+  padding-left: 50px;
+  position: relative;
 }
 
 .fv_vision {
-    font-size: 5.5rem;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    line-height: 0.1;
-    letter-spacing: 0.5em;
-    transform: rotate(-7deg);
-    display: inline-block;
-    color: #465a7a;
-    text-shadow: #fafafa 5px 5px 2px;
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 0.1;
+  letter-spacing: 0.5em;
+  transform: rotate(-7deg);
+  display: inline-block;
+  color: #465a7a;
+  text-shadow: #fafafa 5px 5px 2px;
+}
+
+.fv_vision::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 3px;
+  background-color: #ffa07a;
+  margin: 40px auto 0;
 }
 
 .fv_catchphrase {
-    font-size: 2rem;
-    line-height: 1;
-    margin: 0.5em 0;
-    color: #465a7a;
-    text-shadow: #fafafa 2px 2px 2px;
-    transform: rotate(-7deg);
-    /* display: inline-block; */
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0.1em 0;
+  color: #465a7a;
+  text-shadow: #fafafa 2px 2px 2px;
+  transform: rotate(-7deg);
+  /* display: inline-block; */
 }
 
 .fv_catchphrase:nth-of-type(1) {
-    position: relative;
-    top: 0;
-    left: 10%;
-    line-height: 0.7;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  line-height: 0.7;
 }
 
 .fv_catchphrase:nth-of-type(2) {
-    position: relative;
-    top: 0;
-    left: 30%;
-    line-height: 0.7;
+  position: absolute;
+  top: 150px;
+  left: 190px;
+  line-height: 0.1;
 }
 
 .fv_catchphrase:nth-of-type(3) {
-    position: relative;
-    top: 0;
-    left: 82%;
-    line-height: 0.1;
+  position: absolute;
+  top: 165px;
+  left: 425px;
+  line-height: 0.1;
 }
 
-/* CTAボタン */
 .btn-cta {
-    position: absolute;
-    right: -120%;
-    bottom: -50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background: #ffa07a80;
-    color: #465a7a;
-    text-decoration: none;
-    border-radius: 24px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    gap: 2.5em;
+  position: absolute;
+  top: 190px;
+  right: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: #ffa07a80;
+  color: #465a7a;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  gap: 2.5em;
 }
 
 .arrow {
-    font-size: 1.2em;
-    line-height: 1;
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 .btn-cta:hover {
-    background: #ffa07a;
-    color: #f0f8ff
+  background: #ffa07a;
+  color: #f0f8ff
 }
+
+/*-------------------------------------------
+firstview  トップ画面
+-------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-------------------------------------------
 flow 受講の流れ
 -------------------------------------------*/
-.flow{
+.flow {
   background-color: #FAFAFA;
   padding-bottom: 100px;
 }
 
-.flow-wrapper{
+.flow-wrapper {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
 }
+
 .flow-text {
   width: 50%;
   height: 400px;
@@ -151,7 +191,7 @@ flow 受講の流れ
 
 .row .title {
   padding: 10px;
-  flex:1;
+  flex: 1;
   border-top: #B6B4B4 1px solid;
   color: #6495ED;
   font-weight: bold;
@@ -164,7 +204,7 @@ flow 受講の流れ
   pointer-events: none;
 }
 
-.row.active .title{
+.row.active .title {
   color: #4169E1;
 }
 
