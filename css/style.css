@@ -1,128 +1,161 @@
 @charset "UTF-8";
 
-/* ファーストビュー全体 */
+
+
+/*-------------------------------------------
+firstview  トップ画面
+-------------------------------------------*/
 .firstview {
-    position: relative;
-    overflow: hidden;
-    height: 100vh;
-    /* 画面全体に広げる */
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
 }
 
-/* ロゴ */
 .fv-logo-fixed {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 2;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 2;
 }
 
 .fv-logo-fixed img {
-    max-width: 160px;
-    height: auto;
-    border-radius: 5px;
+  max-width: 160px;
+  height: auto;
+  border-radius: 5px;
 }
 
-/* 背景レイヤー（SVG＋画像） */
 .fv-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-    background: linear-gradient(to right, #f0f8ff, #6495ed);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  background: linear-gradient(to right, #f0f8ff, #6495ed);
 }
 
-/* コンテンツレイヤー（ロゴ・テキスト・CTA） */
 .fv-content {
-    position: absolute;
-    top: 65%;
-    left: 5%;
-    z-index: 1;
-    max-width: 90%;
-    text-align: left;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+  position: absolute;
+  top: 55%;
+  left: 0%;
+  z-index: 1;
+  max-width: 100%;
+  height: 300px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
-/* テキスト部分 */
 .fv_text {
-    flex: 1;
-    min-width: 300px;
-    position: relative;
+  flex: 1;
+  width: 100%;
+  padding-left: 50px;
+  position: relative;
 }
 
 .fv_vision {
-    font-size: 5.5rem;
-    font-weight: 700;
-    margin-bottom: 0.3em;
-    line-height: 0.1;
-    letter-spacing: 0.5em;
-    transform: rotate(-7deg);
-    display: inline-block;
-    color: #465a7a;
-    text-shadow: #fafafa 5px 5px 2px;
+  font-size: 5.5rem;
+  font-weight: 700;
+  line-height: 0.1;
+  letter-spacing: 0.5em;
+  transform: rotate(-7deg);
+  display: inline-block;
+  color: #465a7a;
+  text-shadow: #fafafa 5px 5px 2px;
+}
+
+.fv_vision::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 3px;
+  background-color: #ffa07a;
+  margin: 40px auto 0;
 }
 
 .fv_catchphrase {
-    font-size: 2rem;
-    line-height: 1;
-    margin: 0.5em 0;
-    color: #465a7a;
-    text-shadow: #fafafa 2px 2px 2px;
-    transform: rotate(-7deg);
-    /* display: inline-block; */
+  font-size: 2rem;
+  line-height: 1;
+  margin: 0.1em 0;
+  color: #465a7a;
+  text-shadow: #fafafa 2px 2px 2px;
+  transform: rotate(-7deg);
+  /* display: inline-block; */
 }
 
 .fv_catchphrase:nth-of-type(1) {
-    position: relative;
-    top: 0;
-    left: 10%;
-    line-height: 0.7;
+  position: absolute;
+  top: 120px;
+  left: 100px;
+  line-height: 0.7;
 }
 
 .fv_catchphrase:nth-of-type(2) {
-    position: relative;
-    top: 0;
-    left: 30%;
-    line-height: 0.7;
+  position: absolute;
+  top: 150px;
+  left: 190px;
+  line-height: 0.1;
 }
 
 .fv_catchphrase:nth-of-type(3) {
-    position: relative;
-    top: 0;
-    left: 82%;
-    line-height: 0.1;
+  position: absolute;
+  top: 165px;
+  left: 425px;
+  line-height: 0.1;
 }
 
-/* CTAボタン */
 .btn-cta {
-    position: absolute;
-    right: -120%;
-    bottom: -50px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background: #ffa07a80;
-    color: #465a7a;
-    text-decoration: none;
-    border-radius: 24px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    gap: 2.5em;
+  position: absolute;
+  top: 190px;
+  right: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: #ffa07a80;
+  color: #465a7a;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  gap: 2.5em;
 }
 
 .arrow {
-    font-size: 1.2em;
-    line-height: 1;
+  font-size: 1.2em;
+  line-height: 1;
 }
 
 .btn-cta:hover {
-    background: #ffa07a;
-    color: #f0f8ff
+  background: #ffa07a;
+  color: #f0f8ff
 }
+
+/*-------------------------------------------
+firstview  トップ画面
+-------------------------------------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*-------------------------------------------
 flow 受講の流れ
@@ -251,4 +284,495 @@ height: 180px; /* detailを含めた高さ */
   width: 100%;
   max-height: 500px;
   height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------
+price
+-------------------------------------------*/
+/* PRICEセクション全体 */
+.price {
+  /* max-width: 800px; */
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 60px 20px;
+  background-color: #F0F8FF;
+  /* 優しい青系背景 */
+  border-radius: 10px;
+  /* font-family: 'Arial', sans-serif; */
+  text-align: center;
+}
+
+.price-wrapper {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 50px 10px;
+    background-color: #fff;          /* 枠内の背景 */
+    border: 2px solid #333;       /* 枠線 */
+    border-radius: 12px;             /* 角丸 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* セクションタイトル */
+.price .sec-title {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* サブタイトル */
+.price .price-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+/* プランタイトル */
+.price-plan-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #4a90e2;
+}
+
+/* 料金表示 */
+.price-amount {
+  font-size: 40px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 45px;
+  /* border-bottom: #333 solid 1px; */
+}
+
+/* 特典リスト */
+.price-benefits {
+  list-style: none;
+  /* デフォルトの丸を消す */
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+/* 特典アイテム */
+.price-benefit-item {
+  font-size: 16px;
+  color: #333;
+  background-color: #fff;
+  padding: 12px 15px;
+  margin-bottom: 10px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+/* 最後のアイテムのマージン調整 */
+.price-benefit-item:last-child {
+  margin-bottom: 0;
+}
+
+/*-------------------------------------------
+faq
+-------------------------------------------*/
+.faq {
+  max-width: 800px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+  padding: 60px 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  /* font-family: 'Arial', sans-serif; */
+}
+
+.faq .sec-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.faq .faq-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.faq-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+/* 質問 */
+.faq-question {
+  font-size: 16px;
+  color: #333;
+  margin: 0;
+}
+
+/* Q番号 */
+.faq-number {
+  font-weight: bold;
+  color: #4a90e2;
+  margin-right: 10px;
+}
+
+/* 回答 */
+.faq-answer {
+  display: none;
+  /* 初期非表示 */
+  margin-top: 10px;
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Aラベル */
+.faq-label {
+  font-weight: bold;
+  color: #d81212;
+  margin-right: 8px;
+}
+
+/* ホバーで回答表示 */
+.faq-item:hover .faq-answer {
+  display: block;
+}
+
+/* ホバー時浮き上がり */
+.faq-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/*-------------------------------------------
+footer
+-------------------------------------------*/
+footer {
+  background-color: #6495ED;
+  padding: 40px 20px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.header_title {
+  display: flex;
+  /* flex-direction: column; */
+  /* align-items: center; */
+  gap: 30px;
+  justify-content: center;
+}
+
+.header_logo img {
+  max-width: 150px;
+  height: auto;
+}
+
+.footer_nav {
+  margin-top: 10px;
+}
+
+.footer_nav_menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer_nav_list a {
+  color: #252525;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer_nav_list a:hover {
+  color: #FAFAFA;
+}
+
+.footer-copy {
+  margin-top: 30px;
+  font-size: 14px;
+  opacity: 0.8;
 }
