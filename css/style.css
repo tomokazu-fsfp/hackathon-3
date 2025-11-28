@@ -10,9 +10,9 @@ body {
   margin: 80px 0 60px;
 }
 
-.sec-title {
-  color: rgba(242, 227, 162, .7);
-  font-size: 100px;
+.sec-title{
+  color: rgba(242,227,162,.7);
+  font-size: 120px;
   font-weight: bold;
   text-align: center;
 }
@@ -23,8 +23,8 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30px;
-  color: #333;
-  font-weight: normal;
+  color: #465A7A;
+  font-weight: bold;
 }
 
 
@@ -496,6 +496,10 @@ about  プロナビとは
   font-weight: bold;
   transition: background 0.3s ease;
   gap: 2.5em;
+}
+
+
+
 
   .about-detail-support {
     background-image: url(../img/about5.jpg);
@@ -667,6 +671,89 @@ about  プロナビとは
     transition: background 0.3s ease;
     gap: 2.5em;
   }
+  
+  
+/*-------------------------------------------
+REASON
+-------------------------------------------*/
+.reason{
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reason-slider{
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.reason-block{
+  display: flex;
+  background-color: rgba(135,206,235,.4);
+  border-radius: 30px;
+  border: #666 solid 2px;
+}
+
+.reason-block-left{
+  padding: 10% 5%;
+  width: 55%;
+}
+
+.reason-label{
+  font-weight: bold;
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: #4169E1;
+}
+
+.reason-title{
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.reason-description{
+  line-height: 180%;
+}
+
+.reason-block img{
+  padding: 3%;
+  width: 45%;
+  object-fit: cover;
+}
+
+.slick-slide {
+  display: flex !important;   /* ← これで中身を横並びに */
+  justify-content: center;
+  margin: 0 20px;    /* 中央寄せ（任意） */
+}
+
+.slick-list {
+  margin: 0 -20px;  /* スライドの余白分を打ち消す */
+}
+
+
+.slick-prev:before,
+.slick-next:before {
+  color: #333;   /* 矢印の色 */
+  font-size: 30px;
+}
+
+.slick-prev, .slick-next {
+  z-index: 10;          /* 前面に出す */
+}
+
+.slick-prev {
+  left: -45px;          /* スライダーの外に出す（任意調整） */
+  top: 50%;             /* 縦中央に配置 */
+  transform: translateY(-50%);
+}
+
+.slick-next {
+  right: -40px;         /* スライダーの外に出す（任意調整） */
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 
   /*-------------------------------------------
 flow 受講の流れ
@@ -1124,6 +1211,12 @@ SUPPORT
 
 
 
+
+
+
+@media (max-width: 960px){
+
+}
 
 
 
