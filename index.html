@@ -15,6 +15,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pronavi</title>
@@ -181,20 +183,58 @@
         </section>
 
         <section class="reason">
-            <h2 class="sec-title">reason</h2>
-            <h3 class="reason-subtitle">プロナビが選ばれる3つの理由</h3>
-            <div class="reason-block"> <!-- ⓶以降のまとまり -->
-                <h3 class="reason-label">REASON1</h3> <!-- ⓶：REASON1のラベル -->
-                <h4 class="reason-title">独自のカリキュラムで求められるスキルを習得</h4> <!-- ⓷：理由の見出し -->
-                <div class="reason-description"> <!-- ⓸：本文 -->
-                    <p>
-                        専属コンサルタントは、選りすぐりの現役エンジニア。
-                        プログラミング学習における目標設定、最適なカリキュラム提案、
-                        日々のモチベーション管理など、あなたのスキル向上に本気で向き合います。
-                        性格診断の結果を踏まえ、あなたに合ったコンサルタントをアサインします。
-                    </p>
+
+            <div class="title">
+                <h2 class="sec-title">REASON</h2>
+                <h3 class="subtitle">プロナビが選ばれる3つの理由</h3>
+            </div>
+            <div class="reason-slider single-item">
+                <div class="reason-block"> 
+                    <div class="reason-block-left">
+                        <p class="reason-label">REASON1</p> 
+                        <p class="reason-title">独自のカリキュラムで<br>求められるスキルを習得</p> 
+                        <p class="reason-description"> 
+                            専属コンサルタントは、選りすぐりの現役エンジニア。
+                            プログラミング学習における目標設定、最適なカリキュラム提案、
+                            日々のモチベーション管理など、あなたのスキル向上に本気で向き合います。
+                            性格診断の結果を踏まえ、あなたに合ったコンサルタントをアサインします。
+                        </p>
+                    </div>  
+                    <img src="img\reasons-sp1.jpg">  
+                </div>
+
+                <div class="reason-block"> 
+                    <div class="reason-block-left">
+                        <p class="reason-label">REASON2</p> 
+                        <p class="reason-title">プロのコーチがあなたの<br>レベルに合う学習方法を提案</p> 
+                        <p class="reason-description"> 
+                            プロのコーチが、あなたを効率よくスキルアップするために学習の提案を行います。
+                            毎週の課題に加え、わからない箇所は公式LINEで24時間質問を解決できるので、安心して学習を継続することができます。
+                            さらに学習状況に応じたフィードバックも受けられるため、着実に成長を実感できます。
+
+                        </p>
+                    </div>  
+                    <img src="img\reasons-sp2.jpg">  
+                </div>
+
+                <div class="reason-block"> 
+                    <div class="reason-block-left">
+                        <p class="reason-label">REASON3</p> 
+                        <p class="reason-title">案件獲得を自走できるよう<br>基本を徹底サポート</p> 
+                        <p class="reason-description"> 
+                            スキルが身についた後は、実際に案件を獲得するためのサポートも行っています。
+                            プロの営業マンが営業の同行サポートも行っているので、実際に案件を取るイメージがしやすく、
+                            実際に取れた案件に関しての質問対応もしているので、不安を解消しながら進められます
+                        </p>
+                    </div>  
+                    <img src="img\reasons-sp3.jpg">  
                 </div>
             </div>
+
+
+
+
+            
         </section>
 
         <section class="flow">
@@ -621,6 +661,9 @@
     </footer>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
     <script src="js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {

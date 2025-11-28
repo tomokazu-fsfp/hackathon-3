@@ -33,5 +33,14 @@ $(document).ready(function () {
 });
 
 
-
-
+$('.single-item').slick({
+  arrows: true,
+  dots: true,
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 4000,
+  centerMode: true,
+  centerPadding: "0px",
+});
