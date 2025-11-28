@@ -15,6 +15,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pronavi</title>
@@ -91,8 +92,10 @@
             </div>
         </section>
         <section class="flow">
-            <h2 class="sec-title">flow</h2>
-            <h3 class="flow-subtitle">受講の流れ</h3>
+            <div class="title">
+                <h2 class="sec-title">FLOW</h2>
+                <h3 class="subtitle">受講の流れ</h3>
+            </div>
             <div class="flow-wrapper">
                 <div class="flow-steps">
                     <div class="image-area">
@@ -105,7 +108,7 @@
                         <div class="row active" data-img="img\在宅ワーク女性1.jpg">
                             <p class="flow-number">1</p>
                             <div class="row-right">
-                                <div class="title">無料カウンセリング</div>
+                                <div class="flow-title">無料カウンセリング</div>
                                 <p class="detail">
                                     LINE通話にて簡単なカウンセリングを行います。<br>Web制作に挑戦する目的を一緒に整理し、講座について詳細にご説明します。
                                 </p>
@@ -114,7 +117,7 @@
                         <div class="row" data-img="img\在宅ワーク女性2.jpg">
                                 <p class="flow-number">2</p>
                                 <div class="row-right"> 
-                                    <div class="title">スタートアップミーティング</div>
+                                    <div class="flow-title">スタートアップミーティング</div>
                                     <p class="detail">
                                         Web制作の学習を始める前に、オンラインミーティングにて学習計画を立てます。集中して取り組めるよう、学習環境の整備方法を考えます。
                                     </p>
@@ -123,7 +126,7 @@
                         <div class="row" data-img="img\在宅ワーク男性1.jpg">
                             <p class="flow-number">3</p>
                             <div class="row-right"> 
-                                <div class="title">学習スタート</div>
+                                <div class="flow-title">学習スタート</div>
                                 <p class="detail">
                                     HTML、CSS、そしてjQueryを学習し、手本となるサイトを再現する「模写コーディング」に取り組みます。実践を通じて、幅広いフロントエンドの技術を身につけます。
                                 </p>
@@ -132,7 +135,7 @@
                         <div class="row" data-img="img\在宅ワーク女性3.jpg">
                             <p class="flow-number">4</p>
                             <div class="row-right"> 
-                                <div class="title">ポートフォリオ作成</div>
+                                <div class="flow-title">ポートフォリオ作成</div>
                                 <p class="detail">
                                     自身のオリジナルサイトを制作し、ポートフォリオを作成します。クライアントに自分の強みを効果的に伝えられるよう、構成や見せ方を工夫していきます。
                                 </p>
@@ -141,7 +144,7 @@
                         <div class="row" data-img="img\2人で打ち合わせ.jpg">
                             <p class="flow-number">5</p>
                             <div class="row-right"> 
-                                <div class="title">案件獲得サポート</div>
+                                <div class="flow-title">案件獲得サポート</div>
                                 <p class="detail">
                                     実際に案件を獲得する際には、プロの営業担当が営業に同行し、現場でのサポートを受けることができます。実践を通じて営業力を着実に高めることができます。
                                 </p>
@@ -158,122 +161,195 @@
                     </div>
                     
                 </div>
-
-                <div class="counseling-button">
-                    <a href="#counseling-form" class="btn-counseling">無料カウンセリングを予約する</a>
+                <div class="main-cta">
+                    <a href="./googletag/index.html" class="btn-cta">
+                        無料カウンセリングを予約する
+                        <span class="arrow">→</span>
+                    </a>
                 </div>
-                
             </div>
 
         </section>
 
 
         <section class="coach">
-            <h2 class="sec-title">COACH</h2>
-            <p class="coach-subtitle">“わからない”を“できる”に変える<br>現役エンジニアがサポート</p>
+            <div class="coach-wrapper">
 
-            <div class="coach-list">
-                <div class="coach-card">
-                    <img src="画像URL1" alt="TESTUの写真" class="coach-image">
-                    <p class="coach-label">現役エンジニア講師</p>
-                    <h3 class="coach-name">TESTU</h3>
-                    <p class="coach-comment">
-                        その人にとって継続可能かつ、<br>
-                        着実にスキルをつけられるような学習方法を<br>
-                        一緒に探し続けます。
-                    </p>
+                <div class="title">
+                    <h2 class="sec-title">COACH</h2>
+                    <h3 class="subtitle">現役エンジニア講師</h3>
                 </div>
 
-                <div class="coach-card">
-                    <img src="画像URL2" alt="YURIKOの写真" class="coach-image">
-                    <p class="coach-label">現役エンジニア講師</p>
-                    <h3 class="coach-name">YURIKO</h3>
-                    <p class="coach-comment">
-                        その人にとって継続可能かつ、<br>
-                        着実にスキルをつけられるような学習方法を<br>
-                        一緒に探し続けます。
-                    </p>
-                </div>
+                <p class="coach-lead">ProNaviの講師は全員が現役エンジニアです！
+                    <br>現場で活躍するエンジニアが、実践力を育てます。
+                </p>
 
-                <div class="coach-card">
-                    <img src="画像URL3" alt="AOKIの写真" class="coach-image">
-                    <p class="coach-label">現役エンジニア講師</p>
-                    <h3 class="coach-name">AOKI</h3>
-                    <p class="coach-comment">
-                        その人にとって継続可能かつ、<br>
-                        着実にスキルをつけられるような学習方法を<br>
-                        一緒に探し続けます。
-                    </p>
-                </div>
-            </div>
+                <ul class="coach-list">
+                    <li class="coach-card testu">
+                        <img src="img\teacher1.jpg" alt="TESTUの写真" class="coach-image">
+                        <div class="card-right">
+                            <p class="coach-label">現役エンジニア講師</p>
+                            <h3 class="coach-name">TESTU</h3>
+                            <p class="coach-comment">
+                                "その人にとって継続可能かつ、<br>
+                                着実にスキルをつけられるような学習方法を<br>
+                                一緒に探し続けます。"
+                            </p>
+                            <p class="hover-comment">
+                                プログラミング学習は筋トレに似ていると思います。<br>
+                                人それぞれ体格も違えば、やるべき事も変わってくる。<br>
+                                間違ったやり方で筋トレをし続けても結果には繋がりにくい。<br>
+                                正しいやり方と継続がとても重要です。<br>
+                                その人にとって継続可能かつ<br>
+                                しっかり最適な負荷をかけ続ける学習方法を一緒に探し続けます！
+                            </p>
+                        </div>
+                    </li>
 
-            <div class="counseling-button">
-                <a href="#counseling-form" class="btn-counseling">無料カウンセリングを予約する</a>
+                    <li class="coach-card yuriko">
+                        <img src="img\teacher2.jpg" alt="YURIKOの写真" class="coach-image">
+                        <div class="card-right ">
+                            <p class="coach-label">現役エンジニア講師</p>
+                            <h3 class="coach-name">YURIKO</h3>
+                            <p class="coach-comment">
+                                “プログラミングスキルを習得するには<br>
+                                環境×覚悟が必要だと思っています。”
+                            </p>
+                            <p class="hover-comment">
+                                世の中には数多くの学習教材や学習方法が溢れていますが<br>
+                                プロナビはあなたの目標を最短で達成するためには<br>
+                                どの手段を取ることが正しいのか、忙しいあなたでも<br>
+                                学習が継続できるような仕組みや環境を提供します。<br>
+                                「スキルを伸ばす」その覚悟を持っていただければ<br>
+                                私たちコンサルタント一同、全力で<br>
+                                最短でプログラミングスキルを伸ばすサポートをさせていただきます！
+                            </p>
+                        </div>
+                    </li>
+
+                    <li class="coach-card aoki">
+                        <img src="img\teacher3.jpg" alt="AOKIの写真" class="coach-image">
+                        <div class="card-right">
+                            <p class="coach-label">現役エンジニア講師</p>
+                            <h3 class="coach-name">AOKI</h3>
+                            <p class="coach-comment">
+                                “卒業後も自分の力で成長していけるような<br>
+                                学習スキルも同時に身につけて欲しい。”
+                            </p>
+                            <p class="hover-comment">
+                                プログラミングは多くの言語があり、使われる言語の変化も早いです。<br>
+                                そのため、実際に仕事をするときに<br>
+                                新しい知識が必要になってくることもあるため<br>
+                                ただ覚えるだけではなく、自分の力で学習を進めていく能力も<br>
+                                半年間を通して身につけていただきたいと思っています。。
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="main-cta">
+                    <a href="./googletag/index.html" class="btn-cta">
+                        無料カウンセリングを予約する
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
             </div>
         </section>
-        <section class="support">
-            <section class="support-section">
-                <h2 class="sec-title">SUPPORT</h2>
-                <p class="support-subtitle">効率の良い学習環境</p>
 
-                <div class="support-features">
+        <section class="support"> 
+            <section class="support-section">
+                <div class="title">
+                    <h2 class="sec-title">SUPPORT</h2>
+                    <p class="subtitle">効率の良い学習環境</p>
+                </div>
+
+                <div class="support-features  support-wrapper">
                     <div class="support-item">
+                        <img src="img\授業＿青.png" class="lesson-img">
                         <div class="support-number">01</div>
                         <h3 class="support-title">週1回のオンライン面談</h3>
                         <p class="support-description">
-                            面談では、目標達成に向けた学習計画の作成や、進捗確認、学習の悩み相談などを行います。<br>
-                            講師が一人ひとりに寄り添い、学習をサポートします。
+                            週1回、専属講師と1時間のマンツーマン授業を行います。<br><br>
+                            毎回、次回までの1週間分の学習スケジュールを個別に作成するため、迷わずにカリキュラムを進められます。
+
                         </p>
                     </div>
 
                     <div class="support-item">
+                        <img src="img\チャット＿青.png" class="chat-img">
                         <div class="support-number">02</div>
                         <h3 class="support-title">公式LINEで24時間質問対応</h3>
                         <p class="support-description">
-                            プログラミング学習中に出てくる疑問は、公式LINEでいつでも質問可能。<br>
-                            「つまづいたけど、次の面談まで待てない」そんな時もすぐに質問できるから安心です。
+                            専属講師があなたの学習を24時間公式LINEにてサポートします。<br><br>
+                            学習の中で「手が止まった」と感じたときは、LINEで質問するだけでOK。すぐにコーチが疑問を解消します。
                         </p>
                     </div>
 
                     <div class="support-item">
+                        <img src="img\営業サポート＿青.png" class="sales-img">
                         <div class="support-number">03</div>
-                        <h3 class="support-title">実務経験サポート</h3>
+                        <h3 class="support-title">営業同行サポート</h3>
                         <p class="support-description">
-                            サポーターは、全員が現役のエンジニア。<br>
-                            実務経験をもとに、学習のサポートを行います。
+                            プロの営業担当が案件獲得の進め方を一緒に考え、営業活動に同行します。<br><br>
+                            実際の現場を見ていただきながら、確実な成果につなげていきます。さらに、公式LINEではいつでも質問が可能なので、安心して取り組めます。
                         </p>
                     </div>
                 </div>
             </section>
 
             <section class="work-session">
-                <h3 class="work-session-title">サポーターと受講生が集まる オンライン作業会</h3>
-                <p class="work-session-description">
-                    毎日決まった時間に作業会があるから、生活の中に学習時間を組み込みやすい！<br>
-                    「一人だと集中できない」「つい後回しにしてしまう」そんな方も、仲間と一緒なら頑張れる。<br>
-                    作業会では、もくもく作業するだけでなく、質問や相談も可能です。
-                </p>
+                <div class="work-contents support-wrapper">
+                    <div class="work-session-title" > 
+                        <p>モチベーション維持をサポート</p>
+                        <h3>オンライン作業会</h3>
+                    </div>
+                    <div class="work-session-content1">
+                        <p>
+                            オンライン上の仮想オフィスにて、作業会に参加することができます。<br>
+                            同じ目的をもつ仲間とのつながりを感じながら、安心して学びと作業に集中できる環境が整っています。<br>
+                            イベントや学習会を通して、仲間との繋がりを作ることで学習のモチベーションを保てます。
+                        </p>
+                        <ul class="events-list">
+                            <li>朝活セッション</li>
+                            <li>オンライン飲み会</li>
+                            <li>初学者向け質問会</li>
+                            <li>案件獲得に向けた質問会</li>
+                            <li>ハッカソン</li>
+                            <li>学習セミナー</li>
+                        </ul>
+                    </div>
 
-                <div class="work-session-buttons">
-                    <a href="#" class="work-button">質問ができる作業会</a>
-                    <a href="#" class="work-button">初学者向けハンズオン</a>
-                    <a href="#" class="work-button">デザインレビュー会</a>
-                </div>
+                    <div class="work-session-content2">
+                        <div class="work-session-buttons">
+                            <p>作業会の中では、ハッカソンなどのチーム型イベントも開催されており、仲間と協力しながら技術力を高める貴重な機会が用意されています。</p>
+                            <a href="#" class="work-button">第1回ハッカソンの様子</a>
+                            <a href="#" class="work-button">第２回ハッカソンの様子</a>
+                            <a href="#" class="work-button">デザインコンペの様子</a>
+                            
+                        </div>
+                        <img src="img\作業会スキーム.png" class="work-session-img">
+                    </div>
 
-                <div class="work-circle-group">
-                    <div class="work-circle-item">みんなの交流会</div>
-                    <div class="work-circle-item">フリーランス・副業交流会</div>
-                    <div class="work-circle-item">初学者向け交流会</div>
-                </div>
-
-                <div class="counseling-button">
-                    <a href="#work-session-form" class="btn-work-session">作業会に参加</a>
+                    <div class="work-session-content3">
+                        <p>
+                            Pronavi生のポートフォリオ集には、学びを通して生まれた多彩な作品が集まっています。<br>
+                            作品から、さまざまな個性や表現を感じ取ってみてください。<br>
+                            あなたの作品も、このギャラリーにぜひ加えてみましょう。
+                        </p>
+                        <div class="portfolio">
+                            <a href="#" class="work-button">ポートフォリオ集を見る</a>
+                        </div>
+                        
+                    </div>
                 </div>
             </section>
 
-            <div class="counseling-button">
-                <a href="#counseling-form" class="btn-counseling">無料カウンセリングを予約する</a>
-            </div>
+            <div class="main-cta">
+                    <a href="./googletag/index.html" class="btn-cta">
+                        無料カウンセリングを予約する
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
         </section>
         <section class="students">
             <h2 class="sec-title">STUDENTS</h2>
@@ -403,7 +479,7 @@
 
     </main>
 
-    <footer>
+    <footer data-scroll-container>
         <div class="header_title">
             <h1>
                 <a href="#" class="header_logo"> <img src="./img/logo.png" alt="ProNaviのロゴ"> </a>
