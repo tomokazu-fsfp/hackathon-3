@@ -8,6 +8,9 @@ body {
 .title {
   position: relative;
   margin: 80px 0 60px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s;
 }
 
 .sec-title{
@@ -22,6 +25,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  display: block;
+  width: 100%;
+  text-align: center;
   font-size: 30px;
   color: #465A7A;
   font-weight: bold;
@@ -34,7 +40,7 @@ body {
   /* 横方向中央 */
   margin: 60px auto;
   padding: 60px 0 0;
-  width: 500px;
+  max-width: 500px;
   align-items: center;
 }
 
@@ -677,17 +683,18 @@ about  プロナビとは
 REASON
 -------------------------------------------*/
 .reason{
-  max-width: 1000px;
+  max-width: 800px;
   margin: 0 auto;
 }
 
 .reason-slider{
-  max-width: 800px;
   margin: 0 auto;
 }
 
 .reason-block{
   display: flex;
+  width: 100%;
+  max-width: 100%;
   background-color: rgba(135,206,235,.4);
   border-radius: 30px;
   border: #666 solid 2px;
@@ -812,7 +819,7 @@ flow 受講の流れ
 
 
   .row .detail {
-    padding: 10px;
+    padding: 0 10px 10px 10px;
     opacity: 0;
     pointer-events: none;
   }
@@ -916,6 +923,7 @@ COACH
     transition: all 0.5s ease;
     padding: 20px;
     border-radius: 30px;
+    opacity: 0;
   }
 
   .coach-image {
@@ -968,12 +976,12 @@ COACH
 
   .testu {
     background-color: rgba(135, 206, 235, 0.5);
-    margin-right: auto;
+    margin-right: auto 
   }
 
   .yuriko {
     background-color: rgba(242, 227, 162, 0.5);
-    margin-left: auto;
+    margin-left: auto; 
   }
 
   .aoki {
@@ -1011,6 +1019,42 @@ COACH
     opacity: 1;
     transition: all 0.5s ease;
   }
+
+  .coach-left-animate {
+    animation: coach-left 1s ease forwards;
+  }
+
+  .coach-right-animate {
+    animation: coach-right 1s ease forwards;
+  }
+
+
+
+@keyframes coach-left {
+  0% {
+    transform: translateX(-30%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+
+
+@keyframes coach-right {
+    0%{
+        transform: translateX(30%);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 
   /*-------------------------------------------
 SUPPORT
@@ -1207,16 +1251,6 @@ SUPPORT
 
 
 
-
-
-
-
-
-
-
-@media (max-width: 960px){
-
-}
 
 
 
@@ -1691,3 +1725,233 @@ footer
     font-size: 14px;
     opacity: 0.8;
   }
+
+
+
+
+@media (max-width: 900px){
+      
+  /*-------------------------------------------
+  REASON
+  -------------------------------------------*/
+  .reason{
+    max-width: 600px;
+  }
+
+  .reason-block img{
+    padding: 80px 15px 80px 0;
+
+  }
+
+  
+  /*-------------------------------------------
+flow 受講の流れ
+-------------------------------------------*/
+
+  .flow-steps {
+    flex-direction: column;
+  }
+
+  .flow-text {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  .row .flow-title {
+    font-size:18px;
+  }
+
+  .image-area {
+    width: 100%;
+    height: 300px;
+    margin-bottom: 5px;
+  }
+
+
+  .flow-video video {
+    padding-inline: 20px;
+  }
+
+   /*-------------------------------------------
+SUPPORT
+-------------------------------------------*/
+  .support-wrapper {
+    max-width: 600px;
+    padding: 30px 30px 0;
+  }
+
+
+
+  .support-features {
+    flex-direction: column;
+  }
+
+  .support-item {
+    margin-bottom: 30px;
+    width: 100%;
+
+  }
+
+  .work-session {
+    padding: 80px 10px;
+  }
+
+  .events-list li {
+    width: 100%;
+  }
+
+  .work-session-buttons {
+    width: 100%;
+  }
+
+  .work-session-content2 {
+    flex-direction: column;
+  }
+
+  .events-list {
+    margin: 20px 5%;
+  }
+
+
+  .work-session-img {
+    padding: 5%;
+    width: 80%;
+  }
+
+  .portfolio {
+    width: 100%;
+  }
+
+  .work-session-content3{
+    padding-bottom: 30px;
+  }
+}
+
+.work-session-title h3 {
+    font-size: 35px;
+  }
+
+
+
+@media (max-width: 765px){
+
+  .title {
+    position: relative;
+    margin: 50px 0 40px;
+  }
+
+  .sec-title{
+    font-size: 68px;
+  }
+
+  .subtitle {
+    font-size: 25px;
+  }
+
+    .row {
+    height: 63px;
+    /* 初期はタイトル分だけ */
+    overflow: hidden;
+    transition: height 0.6s ease;
+    /* 高さをアニメーション */
+    border-top: #B6B4B4 1px solid;
+    position: relative;
+  }
+
+   .flow-number {
+    position: absolute;
+    font-size: 40px;
+    font-weight: bold;
+    top: 8px;
+    left: 15px;
+    transition: all 0.6s ease;
+    /* 高さをアニメーション */
+    color: #6495ED;
+  }
+
+   .row.active {
+    height: 230px;
+    /* detailを含めた高さ */
+  }
+
+
+  /*-------------------------------------------
+  REASON
+  -------------------------------------------*/
+  .reason{
+    max-width: 350px;
+  }
+
+  .reason-block{
+  flex-direction: column;
+}
+
+.reason-block-left{
+  padding: 10px;
+  width: 100%;
+}
+
+  .reason-block img{
+    padding:15px;
+    width: 100%;
+    height: 200px;
+    object-position: top;
+  }
+
+
+
+  /*-------------------------------------------
+COACH
+-------------------------------------------*/
+
+  .coach-wrapper {
+    padding-inline: 10px;
+
+  }
+
+  .coach-card {
+    flex-direction: column;
+
+  }
+
+  .coach-image {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .card-right {
+    position: static;
+    width: 100%;
+  }
+
+  
+
+  .coach-name {
+    display: block;
+    font-weight: bold;
+    font-size: 25px;
+  }
+
+   .coach-comment {
+    position: static;    
+    transform: translateY(0);
+    margin: 10px 0;
+    font-size: 18px;
+  }
+
+  .hover-comment {
+    padding: 20px;
+    opacity: 1;
+    transition: all 0.1s ease;
+    font-size: 16px;
+    display: block;
+    max-width: 552px;
+    margin: 0 auto;
+
+  }
+
+  .coach-card:hover .coach-comment {
+    opacity: 1;
+ 
+  }
+}
