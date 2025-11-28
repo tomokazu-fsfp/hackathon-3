@@ -15,7 +15,6 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pronavi</title>
@@ -40,7 +39,6 @@
                         clip-path="url(#fvShape)" preserveAspectRatio="xMidYMid meet" />
                 </svg>
             </div>
-            <!-- テキスト・CTA -->
             <div class="fv-content">
                 <div class="fv_text">
                     <h2 class="fv_vision">挑進</h2>
@@ -48,7 +46,7 @@
                     <p class="fv_catchphrase">未経験からWebクリエイターへ</p>
                     <p class="fv_catchphrase">あなた専属の伴走者と</p>
                 </div>
-                <a href="./googletag/index.html" class="btn-cta">
+                <a href="./googletag/index.html" class="btn-cta fv-cta">
                     無料カウンセリングを予約する
                     <span class="arrow">→</span>
                 </a>
@@ -56,13 +54,19 @@
         </section>
 
         <section class="about">
-            <h2 class="sec-title">About</h2>
-            <h3 class="about-subtitle">Pronaviとは</h3>
-            <p class="about-lead">
-                「在宅ワークをかなえたい方」に選ばれている<br>
-                6ヶ月集中のプログラミングスクールです。
-            </p>
-            <div class="about-description">
+            <div class="sec-title-wrapper">
+                <h2 class="sec-title about-title">ABOUT</h2>
+                <h3 class="about-subtitle">Pronaviとは</h3>
+                <div class="about-lead-toggle">
+                    <button class="accordion-toggle">▽</button>
+                    <p class="about-lead">
+                        「在宅ワークをかなえたい方」に選ばれている<br>
+                        6ヶ月集中のプログラミングスクールです。
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-description-summary">
                 <p>ProNaviは、あなた専属の“ナビゲーター”です。</p>
                 <p>Web制作という新しい世界に踏み出すとき、道に迷ったり、進むべき方向が分からなくなることがあります。</p>
                 <p>ProNaviは、そんなあなたの現在地を正確に把握し、目的地までの最適なルートを示してくれる存在です。</p>
@@ -74,7 +78,83 @@
                 <p>本気でスキルを身につけたいなら、ProNaviへ。</p>
                 <p>あなたの未来を一緒に描くナビゲーターが、ここにいます。</p>
             </div>
+
+            <div class="about-description-detail">
+                <div class="about-detail-intro">
+                    <p>ProNaviは、あなたの“学びのナビゲーター”です。</p>
+                    <p>
+                        ProNaviは、未経験からWeb制作スキルを習得し、
+                        在宅ワークや副業案件の獲得を目指す方のための
+                        オンライン完結・個別指導型プログラミングスクールです。
+                    </p>
+                </div>
+                <div class="about-detail-stats">
+                    <ul>
+                        <li><img src="./img/About2.png" alt=""></li>
+                        <li><img src="./img/About3.png" alt=""></li>
+                        <li><img src="./img/About4.png" alt=""></li>
+                    </ul>
+                </div>
+                <div class="about-detail-support">
+                    <p>
+                        「在宅でできる仕事に挑戦したいけど、何から始めればいいか分からない」<br>
+                        「パソコンも得意じゃないし、スクール選びに迷っている」
+                    </p>
+                    <p>
+                        そんな不安や迷いを抱える方に、ProNaviは寄り添います。
+                        私たちは、現役エンジニア講師があなたのレベルや生活スタイルに合わせて
+                        最適な学習プランを設計。
+                        マンツーマンで、あなたのペースに合わせて伴走します。
+                    </p>
+                    <p>未経験からでも安心して学べるように、学習内容やサポート体制を徹底的に工夫しています。</p>
+                    <p><span>90%以上</span>が未経験から始めています!</p>
+                </div>
+                <div class="about-detail-mentors">
+                    <div class="mentors-text">
+                        <p>学習は、1日1時間の自宅学習を6ヶ月。</p>
+                        <p>決して楽な道のりではありませんが</p>
+                        <p>半年後には「自分でもWeb制作ができるんだ!」</p>
+                        <p>という驚きと自信がきっと芽生えているはずです。</p>
+                        <p>
+                            現役エンジニア講師があなたのレベルや目標に合わせて、最適な学習プランを設計。
+                            実務に通用するスキルと自信を身につけていただきます。
+                            最初は不安でも、少しずつ「できる」が増えていく喜びを感じられるはず。
+                            あなたの「やってみたい」を「できた！」に変えるために、私たちは本気で向き合います。
+                        </p>
+                        <p>ProNaviの講師は<span>全員が現役エンジニア</span>です！！</p>
+                    </div>
+                    <div class="mentors-image">
+                        <img src="./img/about6.jpg" alt="">
+                    </div>
+                </div>
+                <div class="about-detail-customize">
+                    <p>ProNaviは、単なる学習支援ではなく、“成果につながる体験”を提供するスクールです。</p>
+                    <p>案件獲得までのサポート体制も整っており、学習後のキャリア形成まで一貫して支援します。</p>
+                    <p>あなたの挑戦に、本気で向き合うナビゲーターがここにいます。</p>
+                    <p>一歩踏み出すその瞬間から、私たちはあなたの未来を一緒に描いていきます。</p>
+                    <p>「本気でスキルを身につけたい」その想いに、私たちは本気で応えます。</p>
+                    <div class="sns">
+                        <ul>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/kakashi.programming.lab?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                    <img src="./img/kakashi.png" alt="かかしさんのInstagram">かかしさんのInstagram</a>
+                            </li>
+                            <li>
+                                <a
+                                    href="https://www.instagram.com/iruka.freelance?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                                    <img src="./img/iruka.png" alt="いるかさんのInstagram">イルカさんのInstagram</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a href="./googletag/index.html" class="btn-cta about-cta">
+                        無料カウンセリングを予約する
+                        <span class="arrow">→</span>
+                    </a>
+                </div>
+            </div>
         </section>
+
         <section class="reason">
             <h2 class="sec-title">reason</h2>
             <h3 class="reason-subtitle">プロナビが選ばれる3つの理由</h3>
@@ -91,6 +171,7 @@
                 </div>
             </div>
         </section>
+
         <section class="flow">
             <div class="title">
                 <h2 class="sec-title">FLOW</h2>
