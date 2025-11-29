@@ -15,8 +15,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pronavi</title>
@@ -48,6 +49,7 @@
                 <li class="header_nav_list"><a href="./googletag/index.html">お申込み</a></li>
             </ul>
         </nav>
+        <button class="hamburger" id="hamburger">☰</button>
     </header>
 
     <main>
@@ -183,58 +185,57 @@
         </section>
 
         <section class="reason">
-
             <div class="title">
                 <h2 class="sec-title">REASON</h2>
                 <h3 class="subtitle">プロナビが選ばれる3つの理由</h3>
             </div>
             <div class="reason-slider single-item">
-                <div class="reason-block"> 
+                <div class="reason-block">
                     <div class="reason-block-left">
-                        <p class="reason-label">REASON1</p> 
-                        <p class="reason-title">独自のカリキュラムで<br>求められるスキルを習得</p> 
-                        <p class="reason-description"> 
+                        <p class="reason-label">REASON1</p>
+                        <p class="reason-title">独自のカリキュラムで<br>求められるスキルを習得</p>
+                        <p class="reason-description">
                             専属コンサルタントは、選りすぐりの現役エンジニア。
                             プログラミング学習における目標設定、最適なカリキュラム提案、
                             日々のモチベーション管理など、あなたのスキル向上に本気で向き合います。
                             性格診断の結果を踏まえ、あなたに合ったコンサルタントをアサインします。
                         </p>
-                    </div>  
-                    <img src="img\reasons-sp1.jpg">  
+                    </div>
+                    <img src="img\reasons-sp1.jpg">
                 </div>
 
-                <div class="reason-block"> 
+                <div class="reason-block">
                     <div class="reason-block-left">
-                        <p class="reason-label">REASON2</p> 
-                        <p class="reason-title">プロのコーチがあなたの<br>レベルに合う学習方法を提案</p> 
-                        <p class="reason-description"> 
+                        <p class="reason-label">REASON2</p>
+                        <p class="reason-title">プロのコーチがあなたの<br>レベルに合う学習方法を提案</p>
+                        <p class="reason-description">
                             プロのコーチが、あなたを効率よくスキルアップするために学習の提案を行います。
                             毎週の課題に加え、わからない箇所は公式LINEで24時間質問を解決できるので、安心して学習を継続することができます。
                             さらに学習状況に応じたフィードバックも受けられるため、着実に成長を実感できます。
 
                         </p>
-                    </div>  
-                    <img src="img\reasons-sp2.jpg">  
+                    </div>
+                    <img src="img\reasons-sp2.jpg">
                 </div>
 
-                <div class="reason-block"> 
+                <div class="reason-block">
                     <div class="reason-block-left">
-                        <p class="reason-label">REASON3</p> 
-                        <p class="reason-title">案件獲得を自走できるよう<br>基本を徹底サポート</p> 
-                        <p class="reason-description"> 
+                        <p class="reason-label">REASON3</p>
+                        <p class="reason-title">案件獲得を自走できるよう<br>基本を徹底サポート</p>
+                        <p class="reason-description">
                             スキルが身についた後は、実際に案件を獲得するためのサポートも行っています。
                             プロの営業マンが営業の同行サポートも行っているので、実際に案件を取るイメージがしやすく、
                             実際に取れた案件に関しての質問対応もしているので、不安を解消しながら進められます
                         </p>
-                    </div>  
-                    <img src="img\reasons-sp3.jpg">  
+                    </div>
+                    <img src="img\reasons-sp3.jpg">
                 </div>
             </div>
 
 
 
 
-            
+
         </section>
 
         <section class="flow">
@@ -634,7 +635,7 @@
 
     </main>
 
-    <footer data-scroll-container>
+    <footer id="footer" data-scroll-container>
         <div class="header_title">
             <h1>
                 <a href="#" class="header_logo"> <img src="./img/logo.png" alt="ProNaviのロゴ"> </a>
@@ -662,40 +663,49 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
     <script src="js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const header = document.getElementById("header");
+            const footer = document.getElementById("footer");
+            const toggleBtn = document.querySelector(".accordion-toggle");
+            const aboutSection = document.querySelector(".about");
+            const hamburger = document.getElementById("hamburger");
+            const navMenu = document.querySelector(".header_nav_menu");
 
+            // ヘッダーのスクロール表示制御
             window.addEventListener("scroll", function () {
-                // 例えば100px以上スクロールしたら表示
-                if (window.scrollY > window.innerHeight) {
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const footerTop = footer ? footer.getBoundingClientRect().top + scrollY : Infinity;
+
+                if (scrollY > windowHeight && scrollY + windowHeight < footerTop) {
                     header.classList.add("scrolled");
                 } else {
                     header.classList.remove("scrolled");
                 }
             });
 
-                // アコーディオンの開閉制御
-                const toggleBtn = document.querySelector(".accordion-toggle");
-                const aboutSection = document.querySelector(".about");
-
+            // アコーディオン開閉制御
+            if (toggleBtn && aboutSection) {
                 toggleBtn.addEventListener("click", function () {
                     aboutSection.classList.toggle("open");
                     toggleBtn.classList.toggle("open");
-
-                    // ボタンのテキスト切り替え（▽ ⇔ △）
-                    if (aboutSection.classList.contains("open")) {
-                        toggleBtn.textContent = "△";
-                    } else {
-                        toggleBtn.textContent = "▽";
-                    }
+                    toggleBtn.textContent = aboutSection.classList.contains("open") ? "△" : "▽";
                 });
-            });
-    </script>
+            }
 
+            // ハンバーガーメニュー開閉制御（JSで直接文字切り替え）
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", function () {
+                    const isOpen = navMenu.classList.toggle("open");
+                    hamburger.textContent = isOpen ? "×" : "☰";
+                });
+            }
+        });
+    </script>
 
 </body>
 

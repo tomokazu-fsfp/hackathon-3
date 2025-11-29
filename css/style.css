@@ -4,17 +4,17 @@ body {
   background-color: #FAFAFA;
 }
 
-
 .title {
   position: relative;
   margin: 80px 0 60px;
 }
 
-.sec-title{
-  color: rgba(242,227,162,.7);
+.sec-title {
+  color: rgba(242, 227, 162, .3);
   font-size: 120px;
   font-weight: bold;
   text-align: center;
+  letter-spacing: 10px;
 }
 
 .subtitle {
@@ -26,7 +26,6 @@ body {
   color: #465A7A;
   font-weight: bold;
 }
-
 
 .main-cta {
   display: flex;
@@ -49,8 +48,6 @@ body {
   transition: background 0.3s ease;
 }
 
-
-
 /*-------------------------------------------
 header  ヘッダー
 -------------------------------------------*/
@@ -58,6 +55,7 @@ header  ヘッダー
   position: fixed;
   top: 0;
   left: 0;
+  padding: 0 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -72,11 +70,8 @@ header  ヘッダー
   opacity: 1;
   visibility: visible;
   background-color: rgba(250, 250, 250, 0.8);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-
-
 
 .header_logo img {
   height: 50px;
@@ -86,7 +81,7 @@ header  ヘッダー
 .header_nav_menu {
   list-style: none;
   display: flex;
-  gap: 2em;
+  gap: 1.5em;
   margin: 0;
   padding: 0;
 }
@@ -103,7 +98,25 @@ header  ヘッダー
   color: #d47c00;
 }
 
+.hamburger {
+  display: none;
+}
 
+.header_nav_menu.open {
+  display: flex;
+  /* openクラスが付いたら表示 */
+  flex-direction: column;
+  gap: 1em;
+}
+
+.hamburger {
+  font-size: 2rem;
+  background: none;
+  border: none;
+  color: #465a7a;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
 
 /*-------------------------------------------
 firstview  トップ画面
@@ -240,7 +253,7 @@ about  プロナビとは
 -------------------------------------------*/
 .sec-title-wrapper {
   position: relative;
-  background-color: #fafafa;
+  background-color: rgb(250, 250, 250);
   padding: 10px 20px;
   text-align: center;
   overflow: hidden;
@@ -251,14 +264,14 @@ about  プロナビとは
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 14vw;
-  color: #F2E3A2;
+  font-size: 120px;
+  color: rgb(242, 227, 162, 0.3);
   z-index: 0;
   padding-bottom: 50px;
   white-space: nowrap;
   pointer-events: none;
   user-select: none;
-  letter-spacing: 0.2em;
+  letter-spacing: 10px;
 }
 
 .about-subtitle {
@@ -301,11 +314,6 @@ about  プロナビとは
   border: none;
   color: #465a7a;
   cursor: pointer;
-  /* transition: transform 0.3s ease; */
-}
-
-.accordion-toggle.open {
-  /* transform: rotate(180deg); */
 }
 
 .about-lead {
@@ -347,7 +355,7 @@ about  プロナビとは
 }
 
 .about-detail-intro {
-  margin-left: 100px;
+  margin: 0 100px;
   padding: 2em;
 }
 
@@ -549,10 +557,6 @@ about  プロナビとは
   transition: background 0.3s ease;
   gap: 2.5em;
 }
-}
-
-
-
 
 .about-detail-support {
   background-image: url(../img/about5.jpg);
@@ -706,110 +710,116 @@ about  プロナビとは
   border: 4px solid #F2E3A2;
 }
 
-  .about-cta {
-    position: absolute;
-    top: 550px;
-    left: 250px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 12px 24px;
-    background: #ffa07a80;
-    color: #465a7a;
-    text-decoration: none;
-    border-radius: 24px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    gap: 2.5em;
-  }
-  
-  
+.about-cta {
+  position: absolute;
+  top: 550px;
+  left: 250px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  background: #ffa07a80;
+  color: #465a7a;
+  text-decoration: none;
+  border-radius: 24px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+  gap: 2.5em;
+}
+
 /*-------------------------------------------
 REASON
 -------------------------------------------*/
-.reason{
+.reason {
   max-width: 1000px;
   margin: 0 auto;
 }
 
-.reason-slider{
+.reason-slider {
   max-width: 800px;
   margin: 0 auto;
 }
 
-.reason-block{
+.reason-block {
   display: flex;
-  background-color: rgba(135,206,235,.4);
+  background-color: rgba(135, 206, 235, .4);
   border-radius: 30px;
   border: #666 solid 2px;
 }
 
-.reason-block-left{
+.reason-block-left {
   padding: 10% 5%;
   width: 55%;
 }
 
-.reason-label{
+.reason-label {
   font-weight: bold;
   font-size: 22px;
   margin-bottom: 20px;
   color: #4169E1;
 }
 
-.reason-title{
+.reason-title {
   font-weight: bold;
   font-size: 20px;
   margin-bottom: 20px;
 }
 
-.reason-description{
+.reason-description {
   line-height: 180%;
 }
 
-.reason-block img{
+.reason-block img {
   padding: 3%;
   width: 45%;
   object-fit: cover;
 }
 
 .slick-slide {
-  display: flex !important;   /* ← これで中身を横並びに */
+  display: flex !important;
+  /* ← これで中身を横並びに */
   justify-content: center;
-  margin: 0 20px;    /* 中央寄せ（任意） */
+  margin: 0 20px;
+  /* 中央寄せ（任意） */
 }
 
 .slick-list {
-  margin: 0 -20px;  /* スライドの余白分を打ち消す */
+  margin: 0 -20px;
+  /* スライドの余白分を打ち消す */
 }
 
 
 .slick-prev:before,
 .slick-next:before {
-  color: #333;   /* 矢印の色 */
+  color: #333;
+  /* 矢印の色 */
   font-size: 30px;
 }
 
-.slick-prev, .slick-next {
-  z-index: 10;          /* 前面に出す */
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  /* 前面に出す */
 }
 
 .slick-prev {
-  left: -45px;          /* スライダーの外に出す（任意調整） */
-  top: 50%;             /* 縦中央に配置 */
+  left: -45px;
+  /* スライダーの外に出す（任意調整） */
+  top: 50%;
+  /* 縦中央に配置 */
   transform: translateY(-50%);
 }
 
 .slick-next {
-  right: -40px;         /* スライダーの外に出す（任意調整） */
+  right: -40px;
+  /* スライダーの外に出す（任意調整） */
   top: 50%;
   transform: translateY(-50%);
 }
 
-
 /*-------------------------------------------
 flow 受講の流れ
 -------------------------------------------*/
-
 .flow-wrapper {
   max-width: 1000px;
   margin: 0 auto;
@@ -860,8 +870,6 @@ flow 受講の流れ
   line-height: 60px;
 }
 
-
-
 .row .detail {
   padding: 10px;
   opacity: 0;
@@ -877,7 +885,6 @@ flow 受講の流れ
   color: #4169E1;
 }
 
-
 .row.active .flow-title {
   color: #4169E1;
 }
@@ -887,7 +894,6 @@ flow 受講の流れ
   /* フェードイン */
   pointer-events: auto;
 }
-
 
 .image-area {
   width: 50%;
@@ -937,11 +943,9 @@ flow 受講の流れ
   height: 100%;
 }
 
-
 /*-------------------------------------------
 COACH
 -------------------------------------------*/
-
 .coach {
   background-color: #FAFAFA;
   padding-bottom: 60px;
@@ -1137,13 +1141,11 @@ SUPPORT
   padding: 80px 0;
 }
 
-
 .work-contents {
   position: relative;
   z-index: 10;
   background-color: rgba(250, 250, 250, 0.9);
   padding: 3%;
-
 }
 
 .work-session-title p {
@@ -1203,7 +1205,6 @@ SUPPORT
   text-align: center;
 }
 
-
 .work-button:hover {
   color: #F9F7EF;
   font-weight: bold;
@@ -1230,7 +1231,6 @@ SUPPORT
   width: 50%;
 }
 
-
 .test {
   background-color: #4a90e2;
 }
@@ -1238,7 +1238,6 @@ SUPPORT
 .o-image.is-inview img {
   opacity: 1;
   transform: scale(1);
-
 }
 
 .image-frame {
@@ -1253,269 +1252,6 @@ SUPPORT
   width: 100%;
   height: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 960px){
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*-------------------------------------------
 price
@@ -1741,4 +1477,49 @@ footer {
   margin-top: 30px;
   font-size: 14px;
   opacity: 0.8;
+}
+
+@media (max-width: 1000px) {
+
+  /*-------------------------------------------
+  header  ヘッダー
+  -------------------------------------------*/
+  .header_nav_menu {
+    display: none;
+    /* 初期は非表示 */
+    flex-direction: column;
+    gap: 1em;
+    background-color: rgba(250, 250, 250, 0.95);
+    position: absolute;
+    top: 60px;
+    /* ヘッダーの下に表示 */
+    right: 0;
+    width: 100%;
+    padding: 1em;
+  }
+
+  .header_nav_menu.open {
+    display: flex;
+    /* ボタンで開いたら表示 */
+  }
+
+  /* ハンバーガーボタン */
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    color: #465a7a;
+    background: none;
+    border: none;
+  }
+
+  /*-------------------------------------------
+  about  プロナビとは
+  -------------------------------------------*/
+  .about-detail-support p {
+    margin: 50px 1.2em;
+    font-size: 1.1rem;
+  }
+
+
 }
