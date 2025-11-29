@@ -1123,6 +1123,7 @@ COACH
   transition: all 0.5s ease;
   padding: 20px;
   border-radius: 30px;
+  opacity: 0;
 }
 
 .coach-image {
@@ -1460,6 +1461,128 @@ SUPPORT
 }
 
 /*-------------------------------------------
+STUDENTS
+  -------------------------------------------*/
+
+
+/* ===== セクション全体 ===== */
+.students {
+  padding: 120px 20px;
+  text-align: center;
+  background-color: #F0F8FF;
+  /* background-image: */
+    /* radial-gradient(#6c19e8 30%, transparent 30%); */
+  background-size: 20px 20px;
+}
+
+.students-catch {
+  font-size: 32px;
+  font-weight: bold;
+  padding-bottom: 45px;
+}
+
+/* ===== 吹き出し全体：2列レイアウト & ゆったり間隔 ===== */
+.voice-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 80px;
+  max-width: 1000px;
+  margin: 0 auto 100px;
+  align-items: start;
+}
+
+/* ===== 各voice-item：縦並び ===== */
+.voice-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 35px;
+}
+
+
+/* ===== 共通：吹き出し本体 ===== */
+.voice-text {
+  position: relative;
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 24px;
+  padding: 36px 32px;
+  font-size: 16px;
+  line-height: 1.9;
+  max-width: 500px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+/* ===== 下向きしっぽ（共通） ===== */
+.voice-text::after {
+  content: "";
+  position: absolute;
+  bottom: -22px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 22px 16px 0 16px;
+  border-style: solid;
+  border-color: #ddd transparent transparent transparent;
+}
+
+/* しっぽの中（白部分） */
+.voice-text::before {
+  content: "";
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 20px 14px 0 14px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+  z-index: 1;
+
+}
+
+/* ===== 写真 ===== */
+.voice-image {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: inset 0 -10px 18px rgba(0, 0, 0, 0.18);
+}
+
+/* ===== メタ情報 ===== */
+.voice-meta {
+  font-size: 13px;
+  margin-top: 6px;
+  color: #555;
+  text-align: center;
+}
+
+.interview-title {
+  font-size: 32px;
+}
+
+.students-message {
+  font-size: 18px;
+}
+
+.interview-video {
+  padding: 30px;
+}
+
+iframe {
+  width: 500px;
+  /* 幅を大きくする */
+  height: 300px;
+  /* 高さを大きくする */
+  padding: 20px;
+  /* 内側の余白を広くする */
+  border: 2px solid #000;
+  /* 枠線 */
+  border-radius: 10px;
+}
+
+/*-------------------------------------------
 price
 -------------------------------------------*/
 /* PRICEセクション全体 */
@@ -1490,12 +1613,12 @@ price
 }
 
 /* セクションタイトル */
-.price .sec-title {
+/* .price .sec-title {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 10px;
   color: #333;
-}
+} */
 
 /* サブタイトル */
 .price .price-subtitle {
@@ -1560,13 +1683,13 @@ faq
   /* font-family: 'Arial', sans-serif; */
 }
 
-.faq .sec-title {
+/* .faq .sec-title {
   font-size: 32px;
   font-weight: bold;
   text-align: center;
   margin-bottom: 10px;
   color: #333;
-}
+} */
 
 .faq .faq-subtitle {
   text-align: center;
@@ -1730,8 +1853,8 @@ footer {
     opacity: 0.8;
   }
 
+}
 
-@media (max-width: 960px) {}
 
   @media (max-width: 900px) {
 
@@ -1839,229 +1962,6 @@ SUPPORT
 
   @media (max-width: 765px) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    /* ===== セクション全体 ===== */
-    .students {
-      padding: 120px 20px;
-      text-align: center;
-      background-color: #F0F8FF;
-      background-image:
-        radial-gradient(#6c19e8 30%, transparent 30%);
-      background-size: 20px 20px;
-    }
-
-    .students-catch {
-      font-size: 32px;
-      font-weight: bold;
-      padding-bottom: 45px;
-    }
-
-    /* ===== 吹き出し全体：2列レイアウト & ゆったり間隔 ===== */
-    .voice-list {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 80px;
-      max-width: 1000px;
-      margin: 0 auto 100px;
-      align-items: start;
-    }
-
-    /* ===== 各voice-item：縦並び ===== */
-    .voice-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 35px;
-    }
-
-
-    /* ===== 共通：吹き出し本体 ===== */
-    .voice-text {
-      position: relative;
-      background-color: #ffffff;
-      border: 2px solid #ddd;
-      border-radius: 24px;
-      padding: 36px 32px;
-      font-size: 16px;
-      line-height: 1.9;
-      max-width: 500px;
-      width: 100%;
-      text-align: center;
-      box-sizing: border-box;
-    }
-
-    /* ===== 下向きしっぽ（共通） ===== */
-    .voice-text::after {
-      content: "";
-      position: absolute;
-      bottom: -22px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 22px 16px 0 16px;
-      border-style: solid;
-      border-color: #ddd transparent transparent transparent;
-    }
-
-    /* しっぽの中（白部分） */
-    .voice-text::before {
-      content: "";
-      position: absolute;
-      bottom: -19px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 20px 14px 0 14px;
-      border-style: solid;
-      border-color: #ffffff transparent transparent transparent;
-      z-index: 1;
-
-    }
-
-    /* ===== 写真 ===== */
-    .voice-image {
-      width: 90px;
-      height: 90px;
-      border-radius: 50%;
-      object-fit: cover;
-      box-shadow: inset 0 -10px 18px rgba(0, 0, 0, 0.18);
-    }
-
-    /* ===== メタ情報 ===== */
-    .voice-meta {
-      font-size: 13px;
-      margin-top: 6px;
-      color: #555;
-      text-align: center;
-    }
-
-    .interview-title {
-      font-size: 32px;
-    }
-
-    .students-message {
-      font-size: 18px;
-    }
-
-    .interview-video {
-      padding: 30px;
-    }
-
-    iframe {
-      width: 500px;
-      /* 幅を大きくする */
-      height: 300px;
-      /* 高さを大きくする */
-      padding: 20px;
-      /* 内側の余白を広くする */
-      border: 2px solid #000;
-      /* 枠線 */
-      border-radius: 10px;
-    }
 
     /* ===== モバイル：1列 ===== */
     @media (max-width: 768px) {
@@ -2422,4 +2322,12 @@ COACH
       opacity: 1;
 
     }
+  }
+
+ @media (max-width: 460px) {
+
+  .sec-title {
+    font-size: 43px;
+  }
+
   }
