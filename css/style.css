@@ -253,6 +253,63 @@ firstview  トップ画面
   color: #f0f8ff
 }
 
+.fv-background image {
+  opacity: 0;
+  transform: translateX(-200px); /* 左にオフセットして開始 */
+  animation: slideFadeIn 2.5s ease-out forwards;
+}
+
+@keyframes slideFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0); /* 最終位置に戻す */
+  }
+}
+
+.fv_vision,
+.fv_catchphrase {
+  opacity: 0; /* 最初は透明 */
+  animation: fadeIn 1.5s ease forwards;
+  animation-delay: 1.5s; /* 3秒後に開始 */
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.fv_vision::after {
+  content: "";
+  display: block;
+  width: 100vw;
+  height: 3px;
+  background-color: #ffa07a;
+  margin: 40px auto 0;
+  transform: scaleX(0);
+  transform-origin: left center;
+  animation: lineScale 2s ease-out forwards;
+  animation-delay: 2s; 
+}
+
+@keyframes lineScale {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+
+
+
+
+
+
+
 /*-------------------------------------------
 about  プロナビとは
 -------------------------------------------*/
