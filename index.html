@@ -15,15 +15,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Pronavi</title>
 </head>
 
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLFWZH7D" height="0" width="0" <!--
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <header class="header" id="header">
+        <div class="header_title">
+            <a href="#" class="header_logo">
+                <img src="./img/logo.png" alt="ProNaviトップページへ">
+            </a>
+        </div>
+        <nav class="header_nav">
+            <ul class="header_nav_menu">
+                <li class="header_nav_list"><a href="#">Top</a></li>
+                <li class="header_nav_list"><a href="#about">About</a></li>
+                <li class="header_nav_list"><a href="#reason">Reason</a></li>
+                <li class="header_nav_list"><a href="#flow">Flow</a></li>
+                <li class="header_nav_list"><a href="#coac">Coach</a></li>
+                <li class="header_nav_list"><a href="#support">Support</a></li>
+                <li class="header_nav_list"><a href="#students">Students</a></li>
+                <li class="header_nav_list"><a href="#price">Price</a></li>
+                <li class="header_nav_list"><a href="#faq">Q&A</a></li>
+                <li class="header_nav_list"><a href="./googletag/index.html">お申込み</a></li>
+            </ul>
+        </nav>
+        <button class="hamburger" id="hamburger">☰</button>
+    </header>
+
     <main>
         <section class="firstview">
             <h1 class="fv-logo-fixed">
@@ -157,7 +185,6 @@
         </section>
 
         <section class="reason">
-
             <div class="title">
                 <h2 class="sec-title">REASON</h2>
                 <h3 class="subtitle">プロナビが選ばれる3つの理由</h3>
@@ -348,7 +375,7 @@
                         </div>
                     </li>
 
-                    <li class="coach-card aoki">
+                    <li class="coach-card aoki move-coach">
                         <img src="img\teacher3.jpg" alt="AOKIの写真" class="coach-image">
                         <div class="card-right">
                             <p class="coach-label">現役エンジニア講師</p>
@@ -362,7 +389,7 @@
                                 そのため、実際に仕事をするときに<br>
                                 新しい知識が必要になってくることもあるため<br>
                                 ただ覚えるだけではなく、自分の力で学習を進めていく能力も<br>
-                                半年間を通して身につけていただきたいと思っています。。
+                                半年間を通して身につけていただきたいと思っています。
                             </p>
                         </div>
                     </li>
@@ -632,7 +659,7 @@
 
     </main>
 
-    <footer data-scroll-container>
+    <footer id="footer" data-scroll-container>
         <div class="header_title">
             <h1>
                 <a href="#" class="header_logo"> <img src="./img/logo.png" alt="ProNaviのロゴ"> </a>
@@ -665,49 +692,45 @@
     <script src="js/main.js"></script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
+            const header = document.getElementById("header");
+            const footer = document.getElementById("footer");
             const toggleBtn = document.querySelector(".accordion-toggle");
             const aboutSection = document.querySelector(".about");
+            const hamburger = document.getElementById("hamburger");
+            const navMenu = document.querySelector(".header_nav_menu");
 
-            toggleBtn.addEventListener("click", function () {
-                // 開閉クラスの切り替え
-                aboutSection.classList.toggle("open");
-                toggleBtn.classList.toggle("open");
+            // ヘッダーのスクロール表示制御
+            window.addEventListener("scroll", function () {
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+                const footerTop = footer ? footer.getBoundingClientRect().top + scrollY : Infinity;
 
-                // ボタンのテキスト切り替え（▽ ⇔ △）
-                if (aboutSection.classList.contains("open")) {
-                    toggleBtn.textContent = "△";
+                if (scrollY > windowHeight && scrollY + windowHeight < footerTop) {
+                    header.classList.add("scrolled");
                 } else {
-                    toggleBtn.textContent = "▽";
+                    header.classList.remove("scrolled");
                 }
             });
+
+            // アコーディオン開閉制御
+            if (toggleBtn && aboutSection) {
+                toggleBtn.addEventListener("click", function () {
+                    aboutSection.classList.toggle("open");
+                    toggleBtn.classList.toggle("open");
+                    toggleBtn.textContent = aboutSection.classList.contains("open") ? "△" : "▽";
+                });
+            }
+
+            // ハンバーガーメニュー開閉制御（JSで直接文字切り替え）
+            if (hamburger && navMenu) {
+                hamburger.addEventListener("click", function () {
+                    const isOpen = navMenu.classList.toggle("open");
+                    hamburger.textContent = isOpen ? "×" : "☰";
+                });
+            }
         });
     </script>
 
 </body>
-<!-- Google Tag Manager (noscript) -->
-<!-- <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLFWZH7D" height="0" width="0" -->
-<!-- style="display:none;visibility:hidden"></iframe></noscript> -->
-<!-- End Google Tag Manager (noscript) -->
-<!-- <header class="header" id="header"> -->
-<!-- <div class="header_title"> -->
-<!-- <a href="#" class="header_logo"> -->
-<!-- <img src="./img/logo.png" alt="ProNaviトップページへ"> -->
-<!-- </a> -->
-<!-- </div> -->
-<!-- <nav class="header_nav"> -->
-<!-- <ul class="header_nav_menu"> -->
-<!-- <li class="header_nav_list"><a href="#">Top</a></li> -->
-<!-- <li class="header_nav_list"><a href="#about">About</a></li> -->
-<!-- <li class="header_nav_list"><a href="#reason">Reason</a></li> -->
-<!-- <li class="header_nav_list"><a href="#flow">Flow</a></li> -->
-<!-- <li class="header_nav_list"><a href="#coac">Coach</a></li> -->
-<!-- <li class="header_nav_list"><a href="#support">Support</a></li> -->
-<!-- <li class="header_nav_list"><a href="#students">Students</a></li> -->
-<!-- <li class="header_nav_list"><a href="#price">Price</a></li> -->
-<!-- <li class="header_nav_list"><a href="#faq">Q&A</a></li> -->
-<!-- <li class="header_nav_list"><a href="./googletag/index.html">お申込み</a></li> -->
-<!-- </ul> -->
-<!-- </nav> -->
-<!-- </header> -->
 
 </html>
