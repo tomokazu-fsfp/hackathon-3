@@ -1,12 +1,62 @@
- /*=================================================
- セクションタイトル
-  ===================================================*/
+// ==========================
+// Header スクロール制御
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+    const header = document.getElementById("header");
+    const footer = document.getElementById("footer");
+
+    window.addEventListener("scroll", function () {
+        const scrollY = window.scrollY;
+        const windowHeight = window.innerHeight;
+        const footerTop = footer ? footer.getBoundingClientRect().top + scrollY : Infinity;
+
+        if (scrollY > windowHeight && scrollY + windowHeight < footerTop) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+    });
+});
+
+// ==========================
+// ハンバーガーメニュー制御
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".header_nav_menu");
+
+    if (hamburger && navMenu) {
+        hamburger.addEventListener("click", function () {
+            const isOpen = navMenu.classList.toggle("open");
+            hamburger.textContent = isOpen ? "×" : "☰";
+        });
+    }
+});
+
+// ==========================
+// About アコーディオン制御
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".accordion-toggle");
+    const aboutSection = document.querySelector(".about");
+
+    if (toggleBtn && aboutSection) {
+        toggleBtn.addEventListener("click", function () {
+            aboutSection.classList.toggle("open");
+            toggleBtn.classList.toggle("open");
+            toggleBtn.textContent = aboutSection.classList.contains("open") ? "▲" : "▼";
+        });
+    }
+});
+
+// =================================================
+//  Section Title Fade-in
+// =================================================
   // スクロール時のイベント
   $(window).scroll(function () {
     // fadeinクラスに対して順に処理を行う/for文と同じ役割
     $(".title ").each(function () {
       // スクロールした距離
-      let scroll = $(window).scrollTop();
       // fadeinクラスの要素までの距離
       // .offsetは要素の座標をとるメソッド。.topをつけることでy軸方向の座標をとる
       // thisはfadeinクラスが該当する
@@ -22,10 +72,9 @@
     });
   });
 
-
-/*-------------------------------------------
-flow 受講の流れ
--------------------------------------------*/
+// =================================================
+// flow 受講の流れ
+// =================================================
 $(document).ready(function () {
   $('.row').mouseenter(function () {
     // 行のactive切り替え
@@ -56,10 +105,9 @@ $(document).ready(function () {
   });
 });
 
-/*-------------------------------------------
-REASON
--------------------------------------------*/
-
+// ================================================
+// Reason Slick Slider
+// ================================================
 $('.single-item').slick({
   arrows: true,
   dots: true,
@@ -84,12 +132,10 @@ $('.single-item').slick({
     ],
 });
 
-
-/*-------------------------------------------
-COACH
--------------------------------------------*/
-
- $(window).scroll(function () {
+// ============================================
+// Coach Card Animation
+// ===========================================
+$(window).scroll(function () {
   $(".coach-card").each(function () {
     var scroll = $(window).scrollTop();
     var target = $(this).offset().top;

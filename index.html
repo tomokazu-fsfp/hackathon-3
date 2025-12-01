@@ -69,7 +69,6 @@
                     </defs>
                     <image href="./img/firstview1-pc3.png" x="0" y="50" width="820" height="864"
                         clip-path="url(#fvShape)" preserveAspectRatio="xMidYMid meet" />
-
                 </svg>
             </div>
             <div class="fv-content">
@@ -91,7 +90,7 @@
                 <h2 class="sec-title about-title">ABOUT</h2>
                 <h3 class="about-subtitle">Pronaviとは</h3>
                 <div class="about-lead-toggle">
-                    <button class="accordion-toggle">▽</button>
+                    <button class="accordion-toggle">▼</button>
                     <p class="about-lead">
                         「在宅ワークをかなえたい方」に選ばれている<br>
                         6ヶ月集中のプログラミングスクールです。
@@ -651,46 +650,6 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/main.js"></script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const header = document.getElementById("header");
-            const footer = document.getElementById("footer");
-            const toggleBtn = document.querySelector(".accordion-toggle");
-            const aboutSection = document.querySelector(".about");
-            const hamburger = document.getElementById("hamburger");
-            const navMenu = document.querySelector(".header_nav_menu");
-
-            // ヘッダーのスクロール表示制御
-            window.addEventListener("scroll", function () {
-                const scrollY = window.scrollY;
-                const windowHeight = window.innerHeight;
-                const footerTop = footer ? footer.getBoundingClientRect().top + scrollY : Infinity;
-
-                if (scrollY > windowHeight && scrollY + windowHeight < footerTop) {
-                    header.classList.add("scrolled");
-                } else {
-                    header.classList.remove("scrolled");
-                }
-            });
-
-            // アコーディオン開閉制御
-            if (toggleBtn && aboutSection) {
-                toggleBtn.addEventListener("click", function () {
-                    aboutSection.classList.toggle("open");
-                    toggleBtn.classList.toggle("open");
-                    toggleBtn.textContent = aboutSection.classList.contains("open") ? "△" : "▽";
-                });
-            }
-
-            // ハンバーガーメニュー開閉制御（JSで直接文字切り替え）
-            if (hamburger && navMenu) {
-                hamburger.addEventListener("click", function () {
-                    const isOpen = navMenu.classList.toggle("open");
-                    hamburger.textContent = isOpen ? "×" : "☰";
-                });
-            }
-        });
-    </script>
 </body>
 
 </html>
