@@ -228,7 +228,7 @@ firstview  トップ画面
 
 .fv-cta {
   position: absolute;
-  top: 75%;
+  top: 70%;
   right: 5%;
   display: inline-flex;
   align-items: center;
@@ -510,7 +510,6 @@ about  プロナビとは
 .about-detail-mentors .mentors-image {
   flex: 1 1 40%;
   text-align: right;
-  border-radius: 30px;
 }
 
 .about-detail-mentors .mentors-image img {
