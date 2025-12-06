@@ -1,15 +1,10 @@
 // ==========================
-// Header / Footer 制御
+// Header スクロール表示制御
 // ==========================
 document.addEventListener("DOMContentLoaded", function () {
     const header = document.getElementById("header");
     const footer = document.getElementById("footer");
-    const toggleBtn = document.querySelector(".accordion-toggle");
-    const aboutSection = document.querySelector(".about");
-    const hamburger = document.getElementById("hamburger");
-    const navMenu = document.querySelector(".header_nav_menu");
 
-    // ヘッダーのスクロール表示制御
     window.addEventListener("scroll", function () {
         const scrollY = window.scrollY;
         const windowHeight = window.innerHeight;
@@ -21,8 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
             header.classList.remove("scrolled");
         }
     });
+});
 
-    // アコーディオン開閉制御
+// ==========================
+// アコーディオン開閉制御
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+    const toggleBtn = document.querySelector(".accordion-toggle");
+    const aboutSection = document.querySelector(".about");
+
     if (toggleBtn && aboutSection) {
         toggleBtn.addEventListener("click", function () {
             aboutSection.classList.toggle("open");
@@ -30,8 +32,15 @@ document.addEventListener("DOMContentLoaded", function () {
             toggleBtn.textContent = aboutSection.classList.contains("open") ? "△" : "▽";
         });
     }
+});
 
-    // ハンバーガーメニュー開閉制御
+// ==========================
+// ハンバーガーメニュー開閉制御
+// ==========================
+document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.querySelector(".header_nav_menu");
+
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", function () {
             const isOpen = navMenu.classList.toggle("open");
